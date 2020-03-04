@@ -1,10 +1,9 @@
-# Python-Email
-Simple Example of SMTP Protocol for Emailing
+# Python-Email-Anexos
 
-In order to use replace the credentials passed as variables at the top.
-  email_user = 'your_email'
-  email_password = 'your_password'
-  email_send = 'recipient_email'
+Um script simples para enviar varios e-mails com anexos utilizando o protocolo SMTP
+
+Por padrão, ele le os e-mails em um arquivo de texto chamado 'email.txt', em seguinda le os arquivos PDF's do 1 a X (1.pdf, 2.pdf, 3.pdf, ...) no mesmo diretório
   
-Set the filename variable to the filename of the attachment to be sent with email.
-  filename='filename'
+O número de arquivos deve ser o mesmo do numero de anexos.
+
+Esse script é bem básico.
