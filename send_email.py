@@ -6,8 +6,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 #Entre com o e-mail a ser usado para enviar
-email_user = input("Entre com o e-mail: ")
-email_password = input("Entre com senha do e-mail: ")
+email_user = input("Enter your outlook e-mail address: ")
+email_password = input("Enter password: ")
 print("\n")
 
 #Lista de e-mails fica em um arquivo 'email.txt' na mesma pasta do script
@@ -29,13 +29,13 @@ arquivo.close()
 for x in range(len(emails)):
 
     email_send = emails[x]
-    subject = 'Informe de rendimentos teste'
+    subject = 'Subject'
     msg = MIMEMultipart()
     msg['From'] = email_user
     msg['To'] = email_send
     msg['Subject'] = subject
 
-    body = 'Segue seu informe de rendimentos como teste'
+    body = 'Body'
     msg.attach(MIMEText(body,'plain'))
 
     filename="" + str(x + 1) + '.pdf' + ""
@@ -55,11 +55,11 @@ for x in range(len(emails)):
 
     server.sendmail(email_user,email_send,text)
     server.quit()
-    print("Email enviado para %s com sucesso" % emails[x])
-    print("Preparando para enviar o próximo")
+    print("E-mail send to %s sucess" % emails[x])
+    print("Preparing to send the next")
     time.sleep(5)
     print("\n")
     attachment.close()
 
 
-print("Todos os e-mails enviados com sucesso")
+print("All emails sent sucessful")
